@@ -36,7 +36,12 @@ hasOnceFlag ("-o":r) = True
 hasOnceFlag ("--once":r) = True
 hasOnceFlag (_:a) = hasOnceFlag a
 
+excludeOptions :: [String] -> [String]
+excludeOptions [] = []
+excludeOptions (('-':a): x) = excludeOptions x
+excludeOptions (a:xs) = a:excludeOptions xs
+
 main :: IO ()
 main = do
   args <- getArgs
-  (printScript (hasOnceFlag args) [] . contentToLines) =<< input args
+  (printScript (hasOnceFlag args) [] . contentToLines) =<< input (excludeOptions args)
