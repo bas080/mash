@@ -1,0 +1,4 @@
+#!/bin/bash
+
+mash --help > ./doc/generated/mash-help.txt && \
+  mash doc/README.md > README.md

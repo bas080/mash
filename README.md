@@ -43,12 +43,22 @@ can't be used for all types of things.
 
 # Usage
 
-`mash file [-o|--once]`
+```
+Mash (C) Bas Huis
 
-  **file** - Either a path of a file or `-` when receiving text from stdin
+mashargs [OPTIONS] [FILE/URL]
+  More flexible file concatenation
 
-  **-o | --once** - Will only require a file once. Subsequent duplicate require
-  statements are removed and not replaced with the reference text content
+Common flags:
+  -o --once     Require duplicate sources only the first time
+  -? --help     Display help message
+  -V --version  Print version information
+
+Mash helps you split up files and concat them easier
+
+To output the generated file to stdout:
+  mash ./doc/README.md
+```
 
 ```bash
 cat doc/README.md | mash - > README.md
@@ -79,6 +89,16 @@ After that make sure you are in mash's root directory and type
 This will place a bin file in `~/.local/bin/mash`. Make sure to have
 `$HOME/.local/bin` in your `$PATH`.
 
+# Test
+
+Tests are writtin in bash. You can run the tests from the project directory by
+typing the following in your terminal.
+
+`./script/test`
+
+Note that the tests require an internet connection in order to test the url
+support.
+
 # Projects
 
 Are you using mash in your project? Consider putting your project on this list.
@@ -91,12 +111,11 @@ Are you using mash in your project? Consider putting your project on this list.
 
 # Roadmap
 
-## Support get requests for getting content.
+## Generated contents
 
-How nice would it be to reference some external text and have it be placed in
-your README.md. Maybe your project requires some setup. Just point to the
-installation instructions file of another project and let mash get it and
-substitute the require statement.
+I am considering this feature because quite often I want to add the output of
+a script to a readme. It might be nice to be able to execute a script and have
+the output replace the require statement
 
 # License
 

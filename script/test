@@ -1,0 +1,8 @@
+#!/bin/bash
+
+stack install && \
+  mash ./doc/README.md || error "failed to generate mash's README" && \
+  mash -o ./doc/README.md || error "failed to generate mash's README with once flag" && \
+  mash https://gist.githubusercontent.com/owainlewis/4132852/raw/7a329c14f3129a5754cb325c0804e19874fd8d1a/Example.hs || \ error "does not support url as argument" &&
+  mash -o https://gist.githubusercontent.com/owainlewis/4132852/raw/7a329c14f3129a5754cb325c0804e19874fd8d1a/Example.hs || \ error "does not support url as argument and once flag" &&
+  echo All tests are passing

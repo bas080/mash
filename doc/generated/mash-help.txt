@@ -1,0 +1,14 @@
+Mash (C) Bas Huis
+
+mashargs [OPTIONS] [FILE/URL]
+  More flexible file concatenation
+
+Common flags:
+  -o --once     Require duplicate sources only the first time
+  -? --help     Display help message
+  -V --version  Print version information
+
+Mash helps you split up files and concat them easier
+
+To output the generated file to stdout:
+  mash ./doc/README.md

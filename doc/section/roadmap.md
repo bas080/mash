@@ -1,8 +1,7 @@
 # Roadmap
 
-## Support get requests for getting content.
+## Generated contents
 
-How nice would it be to reference some external text and have it be placed in
-your README.md. Maybe your project requires some setup. Just point to the
-installation instructions file of another project and let mash get it and
-substitute the require statement.
+I am considering this feature because quite often I want to add the output of
+a script to a readme. It might be nice to be able to execute a script and have
+the output replace the require statement
