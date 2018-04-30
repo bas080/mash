@@ -12,3 +12,7 @@ Create a separate paragraph for each type of require statement.
 - require-run
 - require
 - require-once
+
+## Exit with non zero when command not succesfully run
+
+Currently when a command fails it does not exit with an error code.
