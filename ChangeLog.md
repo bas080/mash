@@ -2,6 +2,12 @@
 
 ## Unreleased changes
 
+### Enhancements
+
+- Cleaup code using hindent default configuration
+- Remove unused functions
+- Use arg parser to get the cli files/url
+
 ### Feature
 
 - `require-run` feature which substitutes require statement with the stdout of
