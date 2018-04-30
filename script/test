@@ -1,5 +1,10 @@
 #!/bin/bash
 
+error() {
+  echo $@
+  exit 1
+}
+
 stack install && \
   mash ./doc/README.md || error "failed to generate mash's README" && \
   mash -o ./doc/README.md || error "failed to generate mash's README with once flag" && \
