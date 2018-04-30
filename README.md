@@ -68,6 +68,17 @@ cat doc/README.md | mash - > README.md
 mash doc/README.md > README.md
 ```
 
+You can also have the stdout of a command substitute the require statement. To
+achieve this we use a different require statement.
+
+```
+  require-run mash --help
+```
+
+The stderr is not written. In case you do want to write the error, you have to
+pipe the stderr to the stdout. `mash --help 2>&1`
+
+
 # Installation
 
 First you need to install stack.
@@ -111,11 +122,10 @@ Are you using mash in your project? Consider putting your project on this list.
 
 # Roadmap
 
-## Generated contents
+## Deprecate once flag and replace with `require-once`
 
-I am considering this feature because quite often I want to add the output of
-a script to a readme. It might be nice to be able to execute a script and have
-the output replace the require statement
+This allows for more granular control over when something should be required
+regardless of the fact if it has been required before.
 
 # License
 

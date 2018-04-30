@@ -1,7 +1,6 @@
 # Roadmap
 
-## Generated contents
+## Deprecate once flag and replace with `require-once`
 
-I am considering this feature because quite often I want to add the output of
-a script to a readme. It might be nice to be able to execute a script and have
-the output replace the require statement
+This allows for more granular control over when something should be required
+regardless of the fact if it has been required before.

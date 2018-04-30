@@ -2,7 +2,10 @@
 
 ## Unreleased changes
 
-> There are no unreleased changes
+### Feature
+
+- `require-run` feature which substitutes require statement with the stdout of
+  the defined shell command
 
 ## 0.2.0
 
