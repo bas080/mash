@@ -45,7 +45,7 @@ lineContents :: Parsed -> String
 lineContents (Line a) = a
 
 printParsed :: [Parsed] -> IO ()
-printParsed [] = putStrLn "" -- Replace putStrLn with putStr
+printParsed [] = putStr ""
 printParsed (Line a:b) = do
   putStrLn a
   printParsed b
