@@ -153,4 +153,3 @@ Currently when a command fails it does not exit with an error code.
 Copyright Bas Huis (c) 2018
 
 Want to see the full [LICENSE](./LICENSE)?
-
