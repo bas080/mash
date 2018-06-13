@@ -1,0 +1,17 @@
+sudo: false
+language: generic
+cache:
+  directories:
+  - $HOME/.stack
+
+addons:
+  apt:
+    packages:
+      - libgmp-dev
+
+before_install:
+- curl -sSL https://get.haskellstack.org/ | sh
+
+script:
+# Build the package, its tests, and its docs and run the tests
+- bash ./script/test

@@ -1,7 +1,7 @@
 # Usage
 
 ```
-require-run mash --help
+require-run ./mash.hs --help
 ```
 
 ```bash

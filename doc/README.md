@@ -1,5 +1,7 @@
 # Mash
 
+[![Build Status](https://travis-ci.org/bas080/Mash.svg?branch=master)](https://travis-ci.org/bas080/Mash)
+
 Mash is a tool to replace "require statements" in files with the contents of
 another.
 
