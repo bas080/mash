@@ -9,10 +9,8 @@ snapshot() {
 }
 
 mash-bin() {
-  stack exec mash -- "$@"
+  ./mash.hs "$@"
 }
-
-stack build || exit 1
 
 snapshot <(mash-bin ./doc/README.md) ./script/snapshot/README.md && \
   snapshot <(mash-bin $gist_url) ./script/snapshot/gist.hs && \
