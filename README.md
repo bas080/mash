@@ -132,10 +132,9 @@ Are you using mash in your project? Consider putting your project on this list.
 
 # Roadmap
 
-## Deprecate once flag and replace with `require-once`
+##  `require-once`
 
 This allows for more granular control over when something should be required
-regardless of the fact if it has been required before.
 
 ## Better document the DSL
 
@@ -154,4 +153,3 @@ Currently when a command fails it does not exit with an error code.
 Copyright Bas Huis (c) 2018
 
 Want to see the full [LICENSE](./LICENSE)?
-

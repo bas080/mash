@@ -1,7 +1,7 @@
 # Usage
 
 ```
-require-run stack exec mash -- --help
+require-run ./mash.hs --help
 ```
 
 ```bash
