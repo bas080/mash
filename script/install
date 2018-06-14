@@ -1,0 +1,7 @@
+#!/bin/bash
+
+./script/build
+
+local_path=$(stack path | grep 'local-bin-path' | cut -f 2 -d ' ')
+
+cp ./dist/mash "$local_path"

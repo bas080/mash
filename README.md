@@ -95,12 +95,14 @@ curl -sSL https://get.haskellstack.org/ | sh
 wget -qO- https://get.haskellstack.org/ | sh
 ```
 
-After that make sure you are in mash's root directory and type
+After that make sure you are in mash's project root and do the following
 
-`stack install`
+```sh
+./script/install
+```
 
-This will place a bin file in `~/.local/bin/mash`. Make sure to have
-`$HOME/.local/bin` in your `$PATH`.
+This will place mash's bin file in `~/.local/bin/`.  Stack adds this directory
+to the $PATH. You can also place the mash bin in your own bin directory.
 
 # Test
 
