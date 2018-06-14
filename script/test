@@ -2,6 +2,8 @@
 
 gist_url='https://gist.githubusercontent.com/owainlewis/4132852/raw/7a329c14f3129a5754cb325c0804e19874fd8d1a/Example.hs'
 
+./script/build
+
 snapshot() {
   test "$SNAPSHOT" = "1" && cat "$1" > "$2" && return 0
 
@@ -9,7 +11,7 @@ snapshot() {
 }
 
 mash-bin() {
-  ./mash.hs "$@"
+  ./dist/mash "$@"
 }
 
 snapshot <(mash-bin ./doc/README.md) ./script/snapshot/README.md && \

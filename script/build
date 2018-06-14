@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -e
+
+mkdir -p dist
+
+stack ghc \
+  --local-bin-path ./dist \
+  --package http-conduit \
+  --package cmdargs \
+  -- ./mash.hs
+
+mv mash mash.o mash.hi dist/
