@@ -1,19 +1,8 @@
-# Mash
+# mash
 
-[![Build Status](https://travis-ci.org/bas080/Mash.svg?branch=master)](https://travis-ci.org/bas080/Mash)
+require ./doc/section/badges.md
 
-Mash is a tool to replace "require statements" in files with the contents of
-another.
-
-```markdown
-1 # Data structures
-2
-3 require ./chapter/linked-lists.md  < 1 ## Linked lists
-                                       2
-                                       3
-4
-5
-```
+require ./doc/section/brief.md
 
 require ./doc/section/getting-started.md
 
