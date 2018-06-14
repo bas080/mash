@@ -15,6 +15,7 @@ mash-bin() {
 }
 
 snapshot <(mash-bin ./doc/README.md) ./script/snapshot/README.md && \
+  snapshot <(cat ./doc/README.md | mash-bin -) ./script/snapshot/README.md && \
   snapshot <(mash-bin $gist_url) ./script/snapshot/gist.hs && \
   echo succes && exit 0 || \
   echo failure && exit 1
