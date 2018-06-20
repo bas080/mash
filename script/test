@@ -11,7 +11,7 @@ snapshot() {
 }
 
 mash-bin() {
-  ./dist/mash "$@"
+  ./mash "$@"
 }
 
 snapshot <(mash-bin ./doc/README.md) ./script/snapshot/README.md && \
