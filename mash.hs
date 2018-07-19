@@ -33,9 +33,9 @@ parseLine line
     File (fmap parse (readBody rest))
   | "require " `isPrefixOf` line = File (fmap parse (readFile rest))
   | "require-run " `isPrefixOf` line = File (fmap parse (readStdout rest))
+  | otherwise = Line line
   where
     rest = unwords $ tail $ words line
-parseLine v = Line v
 
 parse :: String -> [Parsed]
 parse = map parseLine . lines
