@@ -54,15 +54,13 @@ printParsed (File a:b) = do
 
 -- args
 data MashArgs = MashArgs
-  { once :: Bool
-  , file :: String
+  { file :: String
   } deriving (Typeable, Data, Show, Eq)
 
 mashArgs :: MashArgs
 mashArgs =
   MashArgs
-  { once = False &= help "Require duplicate sources only the first time"
-  , file = def &= args &= typ "FILE/URL"
+  { file = def &= args &= typ "FILE/URL"
   } &=
   help "More flexible file concatenation" &=
   summary "Mash (C) Bas Huis" &=

@@ -52,7 +52,6 @@ mashargs [OPTIONS] [FILE/URL]
   More flexible file concatenation
 
 Common flags:
-  -o --once     Require duplicate sources only the first time
   -? --help     Display help message
   -V --version  Print version information
 
