@@ -21,11 +21,7 @@ Ever wanted to have a big file be split up into several files. Maybe you're
 writing a book, or maybe you want to concatenate in very specific manner. Mash
 allows you to do this by defining a `require <file>` at the start of line.
 
-Mash knows if something has been required before. When encountering a require
-statement that was already required, it will by default require it unless the
-`-o` or `--once` flag is defined.
-
-That is all you need to know. Enjoy `mash` and don't abuse it.
+Enjoy `mash` and don't abuse it.
 
 # Reason
 
@@ -73,7 +69,7 @@ You can also have the stdout of a command substitute the require statement. To
 achieve this we use a different require statement.
 
 ```
-  require-run mash --help
+  require-run ./mash.hs --help
 ```
 
 The stderr is not written. In case you do want to write the error, you have to
@@ -94,14 +90,9 @@ curl -sSL https://get.haskellstack.org/ | sh
 wget -qO- https://get.haskellstack.org/ | sh
 ```
 
-After that make sure you are in mash's project root and do the following
-
-```sh
-./script/install
-```
-
-This will place mash's bin file in `~/.local/bin/`.  Stack adds this directory
-to the $PATH. You can also place the mash bin in your own bin directory.
+Mash is a stack script. The script is located at `./mash.hs` and is executable.
+Make sure to add this script to your path by linking or copying it to a bin
+directory.
 
 # Test
 
@@ -133,9 +124,11 @@ Are you using mash in your project? Consider putting your project on this list.
 
 # Roadmap
 
-##  `require-once`
+## Exit with non zero when command not successfully run
 
-This allows for more granular control over when something should be required
+Currently when a command fails it does not exit with an error code. Read more
+about
+[ioError](http://hackage.haskell.org/package/base-4.11.1.0/docs/src/GHC.IO.Exception.html#ioError).
 
 ## Better document the DSL
 
@@ -143,11 +136,6 @@ Create a separate paragraph for each type of require statement.
 
 - require-run
 - require
-- require-once
-
-## Exit with non zero when command not succesfully run
-
-Currently when a command fails it does not exit with an error code.
 
 # License
 

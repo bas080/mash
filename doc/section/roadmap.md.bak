@@ -1,6 +1,6 @@
 # Roadmap
 
-## Exit with non zero when command not successfully run
+## Exit with non zero when command not succesfully run
 
 Currently when a command fails it does not exit with an error code. Read more
 about

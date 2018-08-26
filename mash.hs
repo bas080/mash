@@ -1,5 +1,5 @@
 #!/usr/bin/env stack
--- stack --resolver --package http-conduit --package cmdargs lts-6.15 script
+-- stack --resolver lts-6.15 script
 {-# LANGUAGE DeriveDataTypeable #-}
 
 import Data.ByteString.Lazy.Char8 (unpack)

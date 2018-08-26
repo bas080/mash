@@ -1,7 +1,7 @@
 # Usage
 
 ```
-require-run ./mash --help
+require-run ./mash.hs --help
 ```
 
 ```bash
@@ -16,7 +16,7 @@ You can also have the stdout of a command substitute the require statement. To
 achieve this we use a different require statement.
 
 ```
-  require-run mash --help
+  require-run ./mash.hs --help
 ```
 
 The stderr is not written. In case you do want to write the error, you have to

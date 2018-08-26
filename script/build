@@ -1,7 +1,0 @@
-#!/bin/bash
-
-set -e
-
-mkdir -p dist
-
-stack ghc -- ./mash.hs

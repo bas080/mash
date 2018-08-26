@@ -1,7 +1,0 @@
-#!/bin/bash
-
-./script/test
-
-local_path=$(stack path | grep 'local-bin-path' | cut -f 2 -d ' ')
-
-cp ./mash "$local_path"

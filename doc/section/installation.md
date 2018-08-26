@@ -12,11 +12,6 @@ curl -sSL https://get.haskellstack.org/ | sh
 wget -qO- https://get.haskellstack.org/ | sh
 ```
 
-After that make sure you are in mash's project root and do the following
-
-```sh
-./script/install
-```
-
-This will place mash's bin file in `~/.local/bin/`.  Stack adds this directory
-to the $PATH. You can also place the mash bin in your own bin directory.
+Mash is a stack script. The script is located at `./mash.hs` and is executable.
+Make sure to add this script to your path by linking or copying it to a bin
+directory.
